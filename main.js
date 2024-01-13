@@ -2,6 +2,10 @@
 {
     const btn = document.getElementById('btn');
     btn.addEventListener('click', ()=> {
+        omikuji();
+    },false);
+
+    function omikuji() {
         const result = document.getElementById('result');
         const result_text = document.getElementById('result_text');
         const omikuji = [
@@ -23,9 +27,7 @@
         const r_math = Math.floor(Math.random()*omikuji.length);
         result.textContent = omikuji[r_math];
         result_text.textContent = omikujiText[r_math];
-    },false);
-
-
+    }
 
 
 
