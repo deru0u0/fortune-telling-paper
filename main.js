@@ -1,34 +1,38 @@
 'use script';
 {
-    const btn = document.getElementById('btn');
-    btn.addEventListener('click', ()=> {
-        omikuji();
-    },false);
-
-    function omikuji() {
-        const result = document.getElementById('result');
-        const result_text = document.getElementById('result-message');
-        const omikuji = [
+    const omikujiObj = {
+        title:"おみくじ",
+        omikujiItem: [
             '大吉',
             '中吉',
             '小吉',
             '吉',
             '凶',
             '大凶',
-        ];
-        const omikujiText = [
-            '大吉の場合の処理が入ります。結果がこちらに入ります。',
-            '中吉の場合の処理が入ります。結果がこちらに入ります。',
-            '小吉の場合の処理が入ります。結果がこちらに入ります。',
-            '吉の場合の処理が入ります。結果がこちらに入ります。',
-            '凶の場合の処理が入ります。結果がこちらに入ります。',
-            '大凶の場合の処理が入ります。結果がこちらに入ります。',
-        ];
-        const r_math = Math.floor(Math.random()*omikuji.length);
-        result.textContent = omikuji[r_math];
-        result_text.textContent = omikujiText[r_math];
+        ],
+        omikuji: function() {
+            const resultItem = document.getElementById('result');
+            const r_math = Math.floor(Math.random()*this.omikujiItem.length);
+            resultItem.textContent = this.omikujiItem[r_math];
+        },
+
+        detailMessageButton: function() {
+            const omikujiDetailMessageButton = document.getElementById('omikujiButton');
+            omikujiDetailMessageButton.value = 'もう一度占う';
+            omikujiDetailMessageButton.id = 'detailMessageButton';
+        }
     }
+    const h1 = document.querySelector('h1');
+    h1.textContent = omikujiObj.title;
+    const omikujiButton = document.getElementById('omikujiButton');
 
-
-
+    omikujiButton.addEventListener('click', (e)=> {
+        if ( e.target.id === "omikujiButton" ) {
+            omikujiObj.omikuji();
+            omikujiObj.detailMessageButton();
+        } else {
+            location.reload();
+        }
+    },false);
+    
 }
