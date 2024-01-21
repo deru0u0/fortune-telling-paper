@@ -1,0 +1,45 @@
+@charset"utr-8";
+*{
+    margin:0 auto;
+    padding:0;
+    text-align:center;
+}
+html {
+    overflow-y:scroll;
+}
+body {
+    background-color:#fff;
+    font-size:100%;
+    -webkit-text-size-adjust:100%;
+}
+header {
+    background-color: #972083;
+    color: #fff;
+    font-size: 70%;
+}
+header > h1 {
+    padding:10px 0;
+}
+.result-container {
+    border: 1px solid black;
+    margin-top:10%;
+    width: 90%;
+    height: 200px;
+}
+.result-container > .result-item {
+    line-height: 200px;
+    height: 200px;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+.button {
+    margin: 10% 0;
+    padding: 5% 20%;
+}
+.result-message-container {
+    padding: 0 10%;
+}
+.hidden-button {
+    display: none;
+}
