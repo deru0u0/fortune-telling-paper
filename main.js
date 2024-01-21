@@ -7,7 +7,7 @@
 
     function omikuji() {
         const result = document.getElementById('result');
-        const result_text = document.getElementById('result_text');
+        const result_text = document.getElementById('result-message');
         const omikuji = [
             '大吉',
             '中吉',

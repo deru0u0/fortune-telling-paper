@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>2024年!おみくじ</h1>
+    <header>
+      <h1>おみくじ</h1>
+    </header>
+    <main>
+      <div class="result-container">
+        <p class="result-item" id="result">どきどき</p>
+      </div>
+      <div class="button-container">
+        <input type="button" value="占う" class="button" id="btn">
+      </div>
+    </main>
+    <div class="result--message-container">
+      <p class="result-message-item" id="result-message"></p>
+    </div>
 
-    <p id="result">どきどき</p>
-    <input type="button" value="占う" id="btn">
-    <p id="result_text"></p>
     <script src="./main.js"></script>
 </body>
 </html>
