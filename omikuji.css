@@ -1,50 +1,64 @@
 body {
+    background: #222;
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    background: #222;
 }
-/* html {
-    overflow-y:scroll;
-} */
-header {
-    border-bottom: 0.1rem solid rgb(252, 96, 5);
-    color: #fff;
-    box-shadow: 0 0 0.1rem rgb(252, 96, 5);
-    height: 6rem;
-    position: relative;
-    top: 0;
-}
-.header-title {
-    font-size: 2rem;
-    margin: 0;
-    line-height: 6rem;
-    padding-left: 2.5rem; 
-    letter-spacing: 0.1rem;
-}
-.result-container {
-    border: 1px solid rgb(252, 96, 5);
-    box-shadow: 0 0 1rem rgb(252, 96, 5);
-    background: #555;
+
+.image-container {
     width: 90%;
-    height: 24rem;
-    margin: 2rem auto;
-    border-radius: 2rem;
+    margin:  20rem auto 0 auto;
+    text-align: center;
+    
 }
-.result-container > .result-item {
-    line-height: 200px;
-    height: 200px;
+
+.btn-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+.btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    border-radius: 0;
+    background: #222;
+    color: #ddd;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem #ddd;
+    width: 16rem;
+    height: 4.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    font-size: 32px;
 
 }
-.button {
-    margin: 10% 0;
-    padding: 5% 20%;
+.btn:active {
+    transform: translateY(0.2rem);
+    box-shadow: 0 0 0 #222;
 }
-.result-message-container {
-    padding: 0 10%;
+.move-y { animation: move-y .1s infinite alternate ease-in-out; }
+
+@keyframes move-y {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(1rem);
+    }
 }
-.hidden-button {
-    display: none;
+.result-container {
+    background: transparent;
+    backdrop-filter: blur(1rem);
+    border: 0.1rem solid #ddd;
+    border-radius: 1rem;
+    width: 90%;
+    height: 48rem;
+    position: absolute;
+    left: 1.5rem;
+    top: 6rem;
+    opacity: 0;
+}
+.show-display {
+    opacity: 1;
 }
