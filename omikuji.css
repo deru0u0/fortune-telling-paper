@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    background: #222;
+}
+/* html {
+    overflow-y:scroll;
+} */
+header {
+    border-bottom: 0.1rem solid rgb(252, 96, 5);
+    color: #fff;
+    box-shadow: 0 0 0.1rem rgb(252, 96, 5);
+    height: 6rem;
+    position: relative;
+    top: 0;
+}
+.header-title {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 6rem;
+    padding-left: 2.5rem; 
+    letter-spacing: 0.1rem;
+}
+.result-container {
+    border: 1px solid rgb(252, 96, 5);
+    box-shadow: 0 0 1rem rgb(252, 96, 5);
+    background: #555;
+    width: 90%;
+    height: 24rem;
+    margin: 2rem auto;
+    border-radius: 2rem;
+}
+.result-container > .result-item {
+    line-height: 200px;
+    height: 200px;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+.button {
+    margin: 10% 0;
+    padding: 5% 20%;
+}
+.result-message-container {
+    padding: 0 10%;
+}
+.hidden-button {
+    display: none;
+}

@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>OMIKUJI</title>
 </head>
 <body>
-    <header>
-      <h1>おみくじ</h1>
-    </header>
-    <main>
-      <div class="result-container">
-        <p class="result-item" id="result"></p>
-      </div>
-      <div class="button-container" id="button-container">
-        <input type="button" value="占う" class="button" id="omikujiButton">
-      </div>
-    </main>
-
-    <script src="./main.js"></script>
+    <h1 class="title">おみくじ</h1>
+  <main>
+    <div class="omikuji-image-slider-container"></div>
+    <div class="image-container">
+      <img src="./images/tatemono_jinja.png">
+    </div>
+    <div class="controls">
+      <a href="./omikuji.html" class='omikuji-button omikuji'>占いに行く</a>
+      <button type="button" class="omikuji-button" id="discription_btn">おみくじの種類</button>
+    </div>
+  </main>
+  <script src="./main.js"></script>
 </body>
 </html>

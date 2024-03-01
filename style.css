@@ -1,45 +1,60 @@
-@charset"utr-8";
-*{
-    margin:0 auto;
-    padding:0;
-    text-align:center;
-}
-html {
-    overflow-y:scroll;
-}
 body {
-    background-color:#fff;
-    font-size:100%;
-    -webkit-text-size-adjust:100%;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    background: #222;
 }
-header {
-    background-color: #972083;
-    color: #fff;
-    font-size: 70%;
-}
-header > h1 {
-    padding:10px 0;
-}
-.result-container {
-    border: 1px solid black;
-    margin-top:10%;
+.omikuji-image-slider-container {
+    z-index: 10;
+    position: absolute;
     width: 90%;
-    height: 200px;
+    height: 32rem;
+    left: 1.5rem;
+    border-radius: 1rem;
+    border: 0.1rem solid #ddd;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    opacity: 0;
 }
-.result-container > .result-item {
-    line-height: 200px;
-    height: 200px;
-    font-weight: bold;
-    font-size: 32px;
-
+.show-display {
+    opacity: 1;
 }
-.button {
-    margin: 10% 0;
-    padding: 5% 20%;
+.title {
+    margin: 0;
+    color: #f52828;
+    text-align: center;
+    letter-spacing: 1rem;
+    margin: 4rem 0;
+    font-size: 3rem;
+    filter: drop-shadow(.3rem 0.2rem 0.1rem orange);
 }
-.result-message-container {
-    padding: 0 10%;
+.image-container > img {
+    width: 100%;
+    height: 24rem;
+    opacity: 0.8;
 }
-.hidden-button {
-    display: none;
+.controls {
+    width: 100%;
+    text-align: center;
+}
+.omikuji-button {
+    text-decoration: none;
+    background: #222;
+    color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+    box-shadow:  0 0.2rem #ddd;
+    font-size: 2rem;
+    width: 18rem;
+    height: 6rem;
+    margin-top: 2rem;
+    display: inline-block;
+    cursor: pointer;
+}
+.omikuji-button:active {
+    box-shadow: 0 0 0#222; 
+    transform: translateY(0.2rem);   
+}
+.omikuji {
+    line-height: 6rem;
 }
